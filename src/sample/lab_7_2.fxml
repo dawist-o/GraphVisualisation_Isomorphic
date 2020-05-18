@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="firstFilePath" focusTraversable="false" layoutX="20.0" layoutY="102.0" onKeyReleased="#enterFilePath" prefHeight="25.0" prefWidth="288.0" promptText="Browse file or enter file path" />
+      <TextField fx:id="secondFilePath" focusTraversable="false" layoutX="20.0" layoutY="286.0" onKeyReleased="#enterFilePath" prefHeight="25.0" prefWidth="288.0" promptText="Browse file or enter file path" />
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveInFile" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showInfoAboutProgram" text="About programm" />
+                  <MenuItem mnemonicParsing="false" onAction="#showInfoAboutAuthor" text="About author" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="firstFileButton" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" onAction="#browseFile" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #80ccff;" text="Browse first file" />
+      <Button fx:id="secondFileButton" layoutX="20.0" layoutY="234.0" mnemonicParsing="false" onAction="#browseFile" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #80ccff;" text="Browse second file" />
+      <TextArea fx:id="firstMatrixArea" editable="false" focusTraversable="false" layoutX="339.0" layoutY="55.0" prefHeight="130.0" prefWidth="241.0" promptText="EMPTY" />
+      <TextArea fx:id="secondMatrixArea" editable="false" focusTraversable="false" layoutX="339.0" layoutY="234.0" prefHeight="130.0" prefWidth="241.0" promptText="EMPTY" />
+      <Button fx:id="firstVisualizeButton" layoutX="164.0" layoutY="55.0" mnemonicParsing="false" onAction="#visualize" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #80ff80;" text="Visualize first matrix" />
+      <Button fx:id="secondVisualizeButton" layoutX="164.0" layoutY="234.0" mnemonicParsing="false" onAction="#visualize" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #80ff80;" text="Visualize second matrix" />
+   </children>
+</AnchorPane>
